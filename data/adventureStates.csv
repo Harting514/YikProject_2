@@ -1,0 +1,8 @@
+ID,StateName,ClassName,PNGFilename,CollisionFilename
+0,Room1,PNGRoom,assets/background1.png,
+1,Room2,PNGRoom,assets/background2.png,
+2,Room3,PNGRoom,assets/background3.png,
+3,Room4,PNGRoom,assets/background4.png,
+4,Room5,PNGRoom,assets/background5.png,
+5,Room6,PNGRoom,assets/background6.png,
+6,Room7,PNGRoom,assets/background7.png,

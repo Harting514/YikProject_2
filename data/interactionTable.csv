@@ -1,0 +1,13 @@
+CurrentState,KeyTyped,KeyCode,MouseEvent,ClickableName,MapDirection,NextState
+Room1,,,,,E,Room2
+Room2,,,,,E,Room3
+Room3,,,,,N,Room4
+Room4,,,,,E,Room5
+Room5,,,,,N,Room7
+Room5,,,,,S,Room6
+Room7,,,,,S,Room5
+Room6,,,,,N,Room5
+Room5,,,,,W,Room4
+Room4,,,,,S,Room3
+Room3,,,,,W,Room2
+Room2,,,,,W,Room1
