@@ -1,4 +1,6 @@
 CurrentState,KeyTyped,KeyCode,MouseEvent,ClickableName,MapDirection,NextState
+Splash,,,mouseReleased,,,Instructions
+Instructions,,,,StartGame,,Room1
 Room1,,,,,E,Room2
 Room2,,,,,E,Room3
 Room3,,,,,N,Room4

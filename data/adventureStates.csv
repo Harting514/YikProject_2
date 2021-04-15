@@ -1,8 +1,10 @@
 ID,StateName,ClassName,PNGFilename,CollisionFilename
-0,Room1,PNGRoom,assets/background1.png,
-1,Room2,PNGRoom,assets/background2.png,
-2,Room3,PNGRoom,assets/background3.png,
-3,Room4,PNGRoom,assets/background4.png,
-4,Room5,PNGRoom,assets/background5.png,
-5,Room6,PNGRoom,assets/background6.png,
-6,Room7,PNGRoom,assets/background7.png,
+0,Splash,PNGRoom,assets/Splash.png,
+1,Instructions,InstructionsScreen,assets/Instructions.png,
+2,Room1,Room1Page,assets/background1.png,assets/room1cl.csv
+3,Room2,Room2Page,assets/background2.png,assets/room2cl.csv
+4,Room3,Room3Page,assets/background3.png,assets/room3cl.csv
+5,Room4,Room4Page,assets/background4.png,assets/room4cl.csv
+6,Room5,Room5Page,assets/background5.png,assets/room5cl.csv
+7,Room6,Room6Page,assets/background6.png,assets/room6cl.csv
+8,Room7,Room7Page,assets/background7.png,assets/room7cl.csv
