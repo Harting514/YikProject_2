@@ -1,13 +1,10 @@
 /***********************************************************************************
-  Simple
-  by Scott Kildall
+  Salada : Discrimination
+  by Yik Hung
 
   Uses the p5.2DAdventure.js class 
 
-  To do:
-  ** cleanup p5.2DAdventure.js class + document it
-  ** add mouse events, other interactions
-  ** finish MazeMapper
+  Virsion: 4/20/21
   
 ------------------------------------------------------------------------------------
 	To use:
@@ -18,6 +15,8 @@
 
 var images = [];
 
+var content;
+
 var talkedToWeirdNPC = false;
 
 var NPCW = 100;
@@ -27,6 +26,14 @@ var NPC = [];
 
 var gDebugMode = true;
 
+var index = 0;
+
+var ina = 0;
+var groupIndex = 0;
+
+
+var file = [];
+var logo = [];
 
 // collect NPCs
 var NPC1Int = false;
@@ -49,6 +56,7 @@ var NPCSprite;
 // Allocate Adventure Manager with states table and interaction tables
 function preload() {
   clickablesManager = new ClickableManager('data/clickableLayout.csv');
+  content = new Content_Man('data/Content.csv');
   adventureManager = new AdventureManager("data/adventureStates.csv", "data/interactionTable.csv");
   images[0] = loadImage('assets/team0.png');
   images[1] = loadImage('assets/team1.png');
@@ -58,6 +66,15 @@ function preload() {
   images[5] = loadImage('assets/team5.png');
   images[6] = loadImage('assets/team6.png');
   images[7] = loadImage('assets/team7.png');
+
+
+  logo[0] = loadImage('assets/key.png');
+  logo[1] = loadImage('assets/key.png');
+  logo[2] = loadImage('assets/key.png');
+  logo[3] = loadImage('assets/key.png');
+  logo[4] = loadImage('assets/key.png');
+  logo[5] = loadImage('assets/key.png');
+  logo[6] = loadImage('assets/key.png');
 
   NPC[1] = loadAnimation('assets/monster1.png','assets/monster4.png');
 }
@@ -80,7 +97,8 @@ function setup() {
   adventureManager.setPlayerSprite(playerSprite);
   adventureManager.setClickableManager(clickablesManager);
   setupClickables(); 
-  
+  content.setup();
+
   textSize(24);
   textAlign(LEFT);
 }
@@ -102,6 +120,9 @@ function draw() {
   // team list
   image(images[0], 0, 0, 500, 50);
 
+  // Key collection
+  image(images[0], 0, 0, 500, 50);
+
 
   if( adventureManager.getStateName() !== "Splash" && 
       adventureManager.getStateName() !== "Instructions" ) {
@@ -110,7 +131,16 @@ function draw() {
 
   // this is a function of p5.js, not of this sketch
   	drawSprite(playerSprite);
+
+  	if (file[0]){
+  		image(logo[0], 40, 70, 50, 50);
+  	} 
   }
+  // if (playerSprite.position.x <= 0 || playerSprite.position.x >= width || 
+  //   playerSprite.position.y <= 0 || playerSprite.position.y >= height) {
+  //     groupIndex = 0;
+  //     ina = 0;
+  // }
 }
 
 // pass to adventure manager, this do the draw / undraw events
@@ -188,10 +218,6 @@ clickableButtonOnOutside = function () {
 
 
 clickableButtonPressed = function() {
-	if(adventureManager.getStateName() == "Instructions"){
-		adventureManager.changeState("Room1");
-	}
-
 
 }
 
@@ -226,6 +252,10 @@ class InstructionsScreen extends PNGRoom {
 
   	clickables[0].visible = true;
 
+  	clickables[0].onPress = function temp(){
+  		adventureManager.changeState("Room1");
+  	}
+
     // tint down background image so text is more readable
     tint(128);
       
@@ -248,16 +278,40 @@ class Room1Page extends PNGRoom {
 	preload(){
 		this.img = [];
 		this.img[0] = loadImage('assets/map1.png');
-		this.img[1] = loadImage('assets/npc7.png');
+		//this.img[1] = loadImage('assets/npc7.png');
 		this.NPC= createSprite(590, 145, NPCW, NPCH);
 		this.NPC.addImage(this.img[1]);
+		this.key = createSprite(338, 617, 50, 50);
+		this.key.addImage(logo[0]);
+		// groupIndex = 0;
 	}
 
 	draw(){
 		super.draw();
 		drawSprite(this.NPC);
+		drawSprite(this.key);
+		playerSprite.overlap(this.NPC, this.talkable);
+		playerSprite.overlap(this.key, this.collect);
 		image(this.img[0], 1130, 0, 150, 150);
+		if (ina == 7) this.NPC.remove();
 		//image(this.img[1], 590, 145, NPCW, NPCH);
+	}
+
+	collect() {
+    	file[1] = true;
+    	this.key.remove();
+  	}
+
+	talkable() {
+		content.ChangeToState('Room1');
+		let conversation = content.GroupContent(groupIndex);
+		if (ina < conversation.length) {
+			clickables[1].visible = true;
+			drawtextbox(conversation[ina]);
+			clickables[1].onPress = function temp() { 
+        		ina++;
+      		} 
+		}
 	}
 }
 
@@ -388,4 +442,54 @@ class Room7Page extends PNGRoom {
 		drawSprite(this.NPC);
 		image(this.img[0], 1130, 0, 150, 150);
 	}
+}
+
+
+
+
+
+class Content_Man {
+  //Use csv file location as parameter.
+  constructor(filename) {
+    this.file = loadTable(filename,'csv','header');
+    this.state = [];
+    this.group = [];
+  } 
+  //set up the Content, with State name.
+  setup() {
+    let statetotal = 0;
+    for (let i = 0; i < this.file.getRowCount(); i++) {
+      let statename = this.file.getString(i, 'State');
+
+      if (statename == '') return 'Not Valid State Name';
+      else if (this.state.indexOf(statename) == -1) {
+        this.state[statetotal] = statename;
+        statetotal++;
+      }
+    }
+  }
+  //This will change to the state with the parameter "stateName", find the correct State in csv
+  ChangeToState(stateName) {
+    if (this.state.indexOf(stateName) == -1) return 'Not Valid State Name';
+    else this.group = this.file.findRows(stateName,'State');
+    return this.group;
+  }
+  //This will change to correct group with the parameter "groupID", find the correct Group in csv, return as array of content.
+  GroupContent(groupID) {
+    let content = [];
+    for (let i = 0; i < this.group.length; i++) {
+      if (this.group[i].getNum('Group') == groupID) {
+        content[this.group[i].getNum('Index')] = this.group[i].getString('Content');
+      }
+    }
+    return content;
+  }
+  //Not useful
+  getAllStateName() {
+    return this.state;
+  }
+  //Not useful
+  getS() {
+    return this.group;
+  }
 }
