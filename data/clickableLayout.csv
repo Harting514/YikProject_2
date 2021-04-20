@@ -1,3 +1,5 @@
 ID,Name,State,PNGFilename,Text,x,y,width,height
 0,StartGame,Instructions,,Start Game,100,650,100,50
 1,Next,,,Next,1100,650,100,50
+2,Room2,,,Looking for Energy core,640,360,200,50
+3,Room2,,,Use Energy core,640,360,100,50

@@ -6,3 +6,92 @@ Room1,0,3,"Summoner: I beg you to save Salada, Salada is a diverse world, but du
 Room1,0,4,"Summoner: And at the same time, due to people's inaction, the dark power of discrimination has gradually grown and began to become monsters. The monster of discrimination calls itself Nefarian, and it has used discrimination as energy. Protector, you need to convince the residents of Salada to eliminate prejudice and face the issue of discrimination. Only in this way can weaken Nefarian and defeat it. "
 Room1,0,5,"Summoner: The summoning ritual has exhausted my energy, I beg you now, protector."
 Room1,0,6,"Rey: Don't worry, leave it to me, and I'll take care of it."
+Room2,0,0,(A powerful incantation power surrounds)
+Room2,0,1,"YoungMan: ""Old people? They are just old stubborn ones!"""
+Room2,0,2,Rey: I need a Energy core to lift this curse! 
+Room2,1,0,"(You used the Energy core and activated the purification, the curse was lifted)"
+Room2,1,1,YoungMan: Jesus! What happened? ! Who are you?
+Room2,1,2,"Rey: I am Rey, the protector of social justice, I just lifted the curse of discrimination on you."
+Room2,1,3,YoungMan: Jesus! How can I be cursed?
+Room2,1,4,"Rey: The prejudice and discrimination deep in your heart have become monsters. In order to ensure continuous power, the monster uses the discrimination deep in your heart to impose a curse on you and become irrational."
+Room2,1,5,YoungMan: Discrimination? ! I did not discriminate!
+Room2,1,6,"Rey: Discrimination and prejudice are often overlooked. Just now when you were cursed to take away your sanity, I heard you say: ""Old people? They are just old stubborn ones!"" Why do you discriminate against older people?"
+Room2,1,7,"YoungMan: But the old people are very stubborn, they only know that they keep the traditional way, and occupy social resources but make no contribution to society. Because of age, both physically and mentally, they can’t integrate into society."
+Room2,1,8,"Rey: You are age discrimination and wrong thinking. We will all grow old over time. We cannot discriminate against the elderly. Think about it, have you really gotten to know them?"
+Room2,1,9,"YoungMan: .….. I haven't talked with the elderly for too long, because the age difference prevents me from communicating with them."
+Room2,1,10,"Rey: Try to think about it in another way, you and theirs are different, because people's ideas and ways of thinking are largely based on the surrounding environment. Your current living environment and the living environment of their old people have changed a lot. So sure, there will be differences in your thinking."
+Room2,1,11,"Rey: But it is precisely this difference that society can make more progress, and the experience of the older generation can provide reference and help for the modern generation. Able to find problems and find good experience"
+Room2,1,12,"YoungMan: … You are right! In the past, my thoughts were too narrow. I should learn more about them instead to use prejudice and discrimination against them. Thank you, Rey!"
+Room3,0,0,(A powerful incantation power surrounds)
+Room3,0,1,"OldMan: ""young people! None of them have experience, they only know rampage"""
+Room3,0,2,Rey: I need a Energy core to lift this curse! 
+Room3,1,0,"(You used the Energy core and activated the purification, the curse was lifted)"
+Room3,1,1,OldMan: emmm!? Did I take a nap? What just happened? ...Oh who are you?
+Room3,1,2,"Rey: I am Rey, the protector of social justice, I just lifted the curse of discrimination on you."
+Room3,1,3,OldMan: Discrimination!? Curse!? I'm a little confused
+Room3,1,4,"Rey: The prejudice and discrimination deep in your heart have become monsters. In order to ensure continuous power, the monster uses the discrimination deep in your heart to impose a curse on you and become irrational."
+Room3,1,5,"OldMan: Oh Young man! You must be mistaken, I did not discriminate."
+Room3,1,6,"Rey: Discrimination and prejudice are often overlooked. Just now when you were cursed to take away your sanity, I heard you say: ""young people! None of them have experience, they only know rampage"" Why do you discriminate against younger people?"
+Room3,1,7,"OldMan: This is not discrimination, it is a fact that young people have no experience and only immature! They haven't seen a big storm yet. What they do is only for passion."
+Room3,1,8,"Rey: This is typical age discrimination. You are preconceived, and treat young people with incorrect prejudices."
+Room3,1,9,"Rey: Think about it, the environment they are growing up in is completely different from yours then, and their ideas will definitely disagree with you. But it is precisely this difference that is an important factor in social progress."
+Room3,1,10,"Rey: They need time to accumulate experience. Just like you back then, give young people some time. Chat with them and listen carefully to their thoughts. You will learn new knowledge from their thoughts."
+Room3,1,11,"OldMan: Young man, your idea convinced me! I am really too stubborn! There are too many prejudices and discrimination against young people. I need to communicate more with them! Thank you, Rey"
+Room4_M,0,0,(A powerful incantation power surrounds)
+Room4_M,0,1,"Men: ""Women are very troublesome! They are always indecisive, passive, and overly emotional"""
+Room4_M,0,2,Rey: I need a Energy core to lift this curse! 
+Room4_M,1,0,"(You used the Energy core and activated the purification, the curse was lifted)"
+Room4_M,1,1,Men: What just happened? . . . Who are you?
+Room4_M,1,2,"Rey: I am Rey, the protector of social justice, I just lifted the curse of discrimination on you."
+Room4_M,1,3,"Rey: The prejudice and discrimination deep in your heart have become monsters. In order to ensure continuous power, the monster uses the discrimination deep in your heart to impose a curse on you and become irrational."
+Room4_M,1,4,Men: Me?! Discrimination!? Haha That is impossible.
+Room4_M,1,5,"Rey: Discrimination and prejudice are often overlooked. Just now when you were cursed to take away your sanity, I heard you say: ""Women are very troublesome! They are always indecisive, passive, and overly emotional"" Why do you discriminate against women?"
+Room4_M,1,6,"Men: You know, women are troublesome, they are always indecisive and emotional. Unlike us men, we can engage in dangerous jobs such as hunting, and warfare."
+Room4_M,1,7,"Rey: You are typical sexism, you are preconceived and treat women with incorrect prejudices. This is because of one-sided, wrong information that leads to your cognitive bias."
+Room4_M,1,8,"Rey: Think about it, men and women are the same, and gender is not the dividing line. As long as girls want, they can also do dangerous jobs. This is not the privilege of boys."
+Room4_M,1,9,"Rey: Of course, boys and girls are different, but the diversity created by this difference will make social progress. Can't discriminate against women because of differences."
+Room4_M,1,10,"Men: You are right, and I realized that my cognition was wrong. I should eliminate my arrogance and ignorance, learn more about women, and communicate with them! Change my mistaken thoughts! Thank you, Rey"
+Room4_W,0,0,(A powerful incantation power surrounds)
+Room4_W,0,1,"Women: ""ALL Men are arrogant and aggressive!"""
+Room4_W,0,2,Rey: I need a Energy core to lift this curse! 
+Room4_W,1,0,"(You used the Energy core and activated the purification, the curse was lifted)"
+Room4_W,1,1,Women: What just happened? . . . Who are you?
+Room4_W,1,2,"Rey: I am Rey, the protector of social justice, I just lifted the curse of discrimination on you."
+Room4_W,1,3,"Rey: The prejudice and discrimination deep in your heart have become monsters. In order to ensure continuous power, the monster uses the discrimination deep in your heart to impose a curse on you and become irrational."
+Room4_W,1,4,Women: Me?! Discrimination!? You must be mistaken.
+Room4_W,1,5,"Rey: Discrimination and prejudice are often overlooked. Just now when you were cursed to take away your sanity, I heard you say: ""ALL Men are arrogant and aggressive!"" Why do you discriminate against men?"
+Room4_W,1,6,"Women: You know, men are aggressive, they never consider the details and are not careful. They always like to do dangerous things and are arrogant."
+Room4_W,1,7,"Rey: You are typical sexism, you are preconceived and treat women with incorrect prejudices. This is because of one-sided, wrong information that leads to your cognitive bias."
+Room4_W,1,8,"Rey: Think about it, men and women are the same, and gender is not the dividing line. Don't think that all boys are arrogant."
+Room4_W,1,9,"Rey: Of course, boys and girls are different, but the diversity created by this difference will make social progress. Can't discriminate against men because of differences."
+Room4_W,1,10,"Women: You are right! I realized that my cognition was so wrong. I should eliminate my arrogance and ignorance, learn more about men, and communicate with them! Change my mistaken thoughts! Thank you, Rey"
+Room5,0,0,(A powerful incantation power surrounds)
+Room5,0,1,"Orc: ""The elves are just a group of races that think they are superior! Look down on anyone!"""
+Room5,0,2,Rey: I need a Energy core to lift this curse! 
+Room5,1,0,"(You used the Energy core and activated the purification, the curse was lifted)"
+Room5,1,1,Orc: Ohhh! WTH? Who are you?! Are you the elves?
+Room5,1,2,"Rey: I am Rey, the protector of social justice"
+Room5,1,3,"Orc: hmmm... Ok, I thought you were from the elves"
+Room5,1,4,"Rey: The prejudice and discrimination deep in your heart have become monsters. In order to ensure continuous power, the monster uses the discrimination deep in your heart to impose a curse on you and become irrational."
+Room5,1,5,Orc: Discrimination? ! I did not discriminate!
+Room5,1,6,"Rey: Discrimination and prejudice are often overlooked. Just now when you were cursed to take away your sanity, I heard you say: ""The elves are just a group of races that think they are superior! Look down on anyone!"" Why do you discriminate against elves?"
+Room5,1,7,"Orc: Dude, they are too weak, they only know the etiquette, philosophy, etc. They don't understand the beauty of power at all."
+Room5,1,8,"Rey: This is a difference between ethnic cultures, and you should not be biased or discriminated against."
+Room5,1,9,Rey: The diversity of races can help Salada become better. You can learn from each other the culture of different races and make progress together
+Room5,1,10,"Orc: Bro, I really didn't think about it. Maybe I should have a chat with them one day, to know them better!"
+Room6,0,0,(A powerful incantation power surrounds)
+Room6,0,1,"Elves : ""Orc, savage and rude!"""
+Room6,0,2,Rey: I need a Energy core to lift this curse! 
+Room6,1,0,"(You used the Energy core and activated the purification, the curse was lifted)"
+Room6,1,1,Elves : OMG! What just happened? ! Who are you?
+Room6,1,2,"Rey: I am Rey, the protector of social justice"
+Room6,1,3,"Rey: The prejudice and discrimination deep in your heart have become monsters. In order to ensure continuous power, the monster uses the discrimination deep in your heart to impose a curse on you and become irrational."
+Room6,1,4,Elves : Discrimination? ! I did not discriminate!
+Room6,1,5,"Rey: Discrimination and prejudice are often overlooked. Just now when you were cursed to take away your sanity, I heard you say: ""Orc, savage and rude!"" Why do you discriminate against Orc?"
+Room6,1,6,Elves : Orcs!? They are a savage race! Only Blood-and-guts.
+Room6,1,7,"Rey: This is racial discrimination. You have a big prejudice against the orcs. You haven't learned about them in-depth, have you?"
+Room6,1,8,"Elves : ...... Indeed, I did not communicate with them, I only learned from the hearsay around."
+Room6,1,9,"Rey: Of course, Orc and Elves are different, but the diversity created by this difference will make social progress. Can't discriminate against Orc because of differences."
+Room6,1,10,"Elves : Yep, you are right, I really didn't know them, I should talk to them rather than through hearsay ! Thank you Rey!"
+Room7,0,0,"Nefarian: Ohhhh, see who is here, a small protector hahaha. It seems that you have not eliminated the prejudice and discrimination deep in everyone's hearts hahaha, if only a little bit of prejudice and discrimination exists, I will not be eliminated!"
+Room7,1,0,Nefarian: YOU ELIMINATE ALL THE PREJUDICE AND DISCRIMINATION? ! NOOO! my power! Don't leave me!
