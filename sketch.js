@@ -237,7 +237,7 @@ class InstructionsScreen extends PNGRoom {
     this.textBoxHeight = (height/6)*4; 
 
     // hard-coded, but this could be loaded from a file if we wanted to be more elegant
-    this.instructionsText = "Welcome to Salada！You are the protector of social justice, Rey. You have been summoned from the world of Salada. An evil force has appeared here. Your task is to find and destroy the evil force. You will use the arrow keys to move, and try to approach and interact with the residents of Salada, find the clue. Good luck！";
+    this.instructionsText = "Welcome to Salada！You are the protector of social justice, Rey. You have been summoned from the world of Salada. An evil force has appeared here. Your task is to find and destroy the evil force. You will use the arrow keys to move, and try to approach and interact with the residents of Salada, find the clue (There are hidden tasks need to complete). Good luck！";
   }
   // call the PNGRoom superclass's draw function to draw the background image
   // and draw our instructions on top of this
@@ -271,8 +271,18 @@ class Room1Page extends PNGRoom {
 		this.NPC= createSprite(590, 145, NPCW, NPCH);
 		this.NPC.addImage(this.img[1]);
 
-		this.key = createSprite(338, 617);
-		this.key.addImage(logo[0]);
+    this.key = [];
+		this.key[0] = createSprite(338, 617);
+		this.key[0].addImage(logo[0]);
+
+    this.key[1] = createSprite(296, 214);
+    this.key[1].addImage(logo[1]);
+
+    this.key[2] = createSprite(514, 600);
+    this.key[2].addImage(logo[2]);
+
+    this.key[3] = createSprite(68, 273);
+    this.key[3].addImage(logo[3]);
 
     ina = 0;
     groupIndex = 0;
@@ -280,11 +290,24 @@ class Room1Page extends PNGRoom {
 	draw(){
 		super.draw();
 		drawSprite(this.NPC);
-		drawSprite(this.key);
+		drawSprite(this.key[0]);
+    drawSprite(this.key[1]);
+    drawSprite(this.key[2]);
+    drawSprite(this.key[3]);
+
 		playerSprite.overlap(this.NPC, this.talkable);
-		playerSprite.overlap(this.key, this.collect);
+		playerSprite.overlap(this.key[0], this.collect0);
+    playerSprite.overlap(this.key[1], this.collect1);
+    playerSprite.overlap(this.key[2], this.collect2);
+    playerSprite.overlap(this.key[3], this.collect3);
+
 		image(this.img[0], 1130, 0, 150, 150);
-    if (file[0] == true) this.key.remove();
+
+    if (file[0] == true) this.key[0].remove();
+    if (file[1] == true) this.key[1].remove();
+    if (file[2] == true) this.key[2].remove();
+    if (file[3] == true) this.key[3].remove();
+
     if (ina == 6) this.NPC.remove();
 	}
 	talkable() {
@@ -301,9 +324,18 @@ class Room1Page extends PNGRoom {
       ImageIndex = 1;
     }
 	}
-	collect() {
+	collect0() {
     	file[0] = true;
   	}
+  collect1() {
+      file[1] = true;
+    }
+  collect2() {
+      file[2] = true;
+    }
+  collect3() {
+      file[3] = true;
+    }
 }
 
 class Room2Page extends PNGRoom {
@@ -314,20 +346,14 @@ class Room2Page extends PNGRoom {
 		this.NPC= createSprite(550, 302, NPCW, NPCH);
 		this.NPC.addImage(this.img[1]);
 
-    this.key = createSprite(330, 617);
-    this.key.addImage(logo[1]);
-
 		ina = 0;
 		groupIndex = 0;
 	}
 	draw(){
 		super.draw();
 		drawSprite(this.NPC);
-    drawSprite(this.key);
 		playerSprite.overlap(this.NPC, this.talkable);
-    playerSprite.overlap(this.key, this.collect);
 		image(this.img[0], 1130, 0, 150, 150);
-		if (file[1] == true) this.key.remove();
 		if (ina == 12) this.NPC.remove();
 	}
 	talkable() {
@@ -357,9 +383,6 @@ class Room2Page extends PNGRoom {
 			}
 		}
 	}
-  collect() {
-      file[1] = true;
-  }
 }
 
 class Room3Page extends PNGRoom {
@@ -370,21 +393,15 @@ class Room3Page extends PNGRoom {
 		this.NPC= createSprite(252, 348, NPCW, NPCH);
 		this.NPC.addImage(this.img[1]);
 
-    this.key = createSprite(1197, 306);
-    this.key.addImage(logo[2]);
-
     ina = 0;
     groupIndex = 0;
 	}
 	draw(){
 		super.draw();
 		drawSprite(this.NPC);
-    drawSprite(this.key);
     playerSprite.overlap(this.NPC, this.talkable);
-    playerSprite.overlap(this.key, this.collect);
 		image(this.img[0], 1130, 0, 150, 150);
 
-    if (file[2] == true) this.key.remove();
     if (ina == 11) this.NPC.remove();
 	}
   talkable(){
@@ -413,9 +430,6 @@ class Room3Page extends PNGRoom {
         }
       }
     }
-  }
-  collect() {
-    file[2] = true;
   }
 }
 
@@ -561,20 +575,14 @@ class Room6Page extends PNGRoom {
 		this.NPC = createSprite(32, 570, NPCW, NPCH);
 		this.NPC.addImage(this.img[1], ); 
 
-    this.key = createSprite(116, 157);
-    this.key.addImage(logo[3]);
-
     ina = 0;
     groupIndex = 0;
 	}
 	draw(){
 		super.draw();
 		drawSprite(this.NPC);
-    drawSprite(this.key);
 		image(this.img[0], 1130, 0, 150, 150);
     playerSprite.overlap(this.NPC, this.talkable);
-    playerSprite.overlap(this.key, this.collect);
-		if (file[3] == true) this.key.remove();
     if (ina == 10) this.NPC.remove();
 	}
   talkable() {
@@ -603,9 +611,6 @@ class Room6Page extends PNGRoom {
         }
       }
     }
-  }
-  collect() {
-    file[3] = true;
   }
 }
 
